@@ -1,9 +1,11 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
-  has_many :listings
-
   include BCrypt
+
+  attr_accessible :password, :username
+
+  has_many :listings
 
   def password
     @password ||= Password.new(password_hash)
@@ -30,12 +32,4 @@ class User < ActiveRecord::Base
     end
   end
 
-
 end
-
-
-
-   
-
-
-
