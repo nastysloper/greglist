@@ -1,4 +1,15 @@
 Greglist::Application.routes.draw do
+
+  # Users
+  resources :users
+  match '/signup' => 'users#new'
+
+  # Sessions
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy', :via => :delete
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
