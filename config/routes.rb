@@ -2,6 +2,7 @@ Greglist::Application.routes.draw do
 
   # Users
   resources :users
+  match '/' => 'users#index'
   match '/signup' => 'users#new'
 
   # Sessions
