@@ -1,6 +1,0 @@
-class ListingsController < ApplicationController
-
-
-
-
-end

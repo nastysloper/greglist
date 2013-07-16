@@ -1,9 +1,14 @@
 class UsersController < ApplicationController
 
-  def new
+  def create
     @user = User.new(params[:user])
     @user.password = params[:password]
     @user.save!
+    redirect_to '/'
+  end
+
+  def new
+    @bumble = "What?!"
   end
 
   def show

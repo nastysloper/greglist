@@ -3,8 +3,8 @@
     <%= link_to "Profile", "/profile"  %>
     <%= link_to "Logout", session_path(@user), :method => :delete %>
   <% else %>
-    <%= link_to "Sign up", user_new_path %>
-    <%= link_to "Login", session_new_path %>
+    <%= link_to "Sign up", new_user_path %>
+    <%= link_to "Login", new_session_path %>
   <% end %>
 </ul>
 
