@@ -4,6 +4,7 @@ Greglist::Application.routes.draw do
   resources :users
   match '/' => 'users#index'
   match '/signup' => 'users#new'
+  get '/show' => 'users#show'
 
   # Sessions
   get '/login' => 'sessions#new'

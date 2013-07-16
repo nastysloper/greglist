@@ -14,4 +14,8 @@ class UsersController < ApplicationController
       redirect_to home_url
     end
   end
+
+  def show
+    redirect_to home_url
+  end
 end
