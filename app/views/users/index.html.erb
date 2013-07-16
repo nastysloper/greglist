@@ -1,5 +1,12 @@
-<%=link_to "Sign Up", controller: "users", action: "create" %>
-<%=link_to "Sign In", controller: "sessions", action: "new" %>
+<ul>
+  <% if current_user %>
+    <%= link_to "Profile", "/profile"  %>
+    <%= link_to "Logout", session_path(@user), :method => :delete %>
+  <% else %>
+    <%= link_to "Sign up", user_new_path %>
+    <%= link_to "Login", session_new_path %>
+  <% end %>
+</ul>
 
 <h1>GregsList</h1>
 

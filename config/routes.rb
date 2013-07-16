@@ -4,10 +4,12 @@ Greglist::Application.routes.draw do
   resources :users
   match '/' => 'users#index'
   match '/signup' => 'users#new'
-  get '/show' => 'users#show'
+  #get '/show' => 'users#show'
+  get '/new' => 'users#create'
+
 
   # Sessions
-  get '/login' => 'sessions#new'
+  get '/session/new' => 'sessions#new'
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy', :via => :delete
 
