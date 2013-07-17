@@ -8,8 +8,10 @@ class UsersController < ApplicationController
   end
 
   def new
-    @ralph = "Ralph!"
     @user = User.new
+  end
+
+  def find
   end
 
   def show
