@@ -1,7 +1,7 @@
 <h1>You are at Users New</h1>
-<h3><%= @bumble %></h3>
+<h3> Sign up! </h3>
 
-<% form_for(@user) do |f| %>
+<%= form_for(@user) do |f| %>
   <%= f.text_field :username %>
   <%= f.password_field :password %>
   <%= f.submit %>
