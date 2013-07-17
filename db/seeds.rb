@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.create(username: "nastysloper", password: "123456")
 Listing.create(title: "Cervelo", body: "Ready to race!", user_id: 1)
-Listing.create(title: "Willier", body: "Rare! A real beauty!, user_id: 1)
+Listing.create(title: "Willier", body: "Rare! A real beauty!", user_id: 1)

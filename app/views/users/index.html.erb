@@ -10,3 +10,13 @@
 
 <h1>GregsList</h1>
 
+<ul>
+  <% listings = Listing.all %>
+  <% listings.each do |listing| %>
+  <li><%= listing.title %></li>
+  <li><%= listing.body %></li>
+  <% user = User.find(listing.user_id) %>
+  <li><%= user.username %></li>
+  <br>
+  <% end %>
+</ul>

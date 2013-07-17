@@ -1,4 +1,8 @@
 <h1>You are at Users New</h1>
 <h3><%= @bumble %></h3>
 
-<% form_tag({controller: "user", action: "create"}, method: "POST", class: "user_form") %>
+<% form_for(@user) do |f| %>
+  <%= f.text_field :username %>
+  <%= f.password_field :password %>
+  <%= f.submit %>
+<% end %>

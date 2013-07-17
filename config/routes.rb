@@ -1,15 +1,17 @@
 Greglist::Application.routes.draw do
 
+  root to: 'users#index'
+
   # Users
-  #resources :users
-  match '/' => 'users#index'
+  resources :users
+  #match '/' => 'users#index'
   #match '/signup' => 'users#new'
   #get '/show' => 'users#show'
-  get 'new/user' => 'users#new'
-  post '/user/create' => 'user#create'
+  #get 'new/user' => 'users#new'
+  #post '/users/:id' => 'user#create'
 
 
-  # Sessions
+  # sessions
   get '/new/session' => 'sessions#new'
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy', :via => :delete
