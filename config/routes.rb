@@ -1,6 +1,6 @@
 Greglist::Application.routes.draw do
 
-  root to: 'users#index'
+  root to: 'listings#index'
 
   # Users
   resources :users

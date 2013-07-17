@@ -1,1 +1,23 @@
 <h1>GregsList Listings</h1>
+
+<ul>
+  <% if current_user %>
+    <%= link_to "Profile", "/profile"  %>
+    <%= link_to "Logout", session_path(@user), :method => :delete %>
+  <% else %>
+    <%= link_to "Sign up", new_user_path %>
+    <%= link_to "Login", new_session_path %>
+  <% end %>
+</ul>
+
+<h1>GregsList</h1>
+
+<ul>
+  <% @listings.each do |listing| %>
+  <li><%= listing.title %></li>
+  <li><%= listing.body %></li>
+  <% user = User.find(listing.user_id) %>
+  <li><%= user.username %></li>
+  <br>
+  <% end %>
+</ul>
